@@ -3,7 +3,7 @@
  */
 
 /* Zig Zag Tear Mixin */
-@mixin xe_zig ($deg, $color, $pos) {
+@mixin xe_zig ($deg, $color) {
 	 background: linear-gradient(-$deg, $color 3px, transparent 0), linear-gradient($deg, $color 3px, transparent 0);
 }
 

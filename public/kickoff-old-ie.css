@@ -2653,14 +2653,10 @@ body {
 /**
  * Views
  */
-/* Conversion Pannel */
-.xe {
-  background-color: #ffffff;
-  margin-top: 15px;
-  padding: 15px;
-  position: relative;
-  box-shadow: inset -1px 0 0 #ddd, inset 1px 0 0 #ddd; }
-
+/**
+ * XE Panel Component
+ */
+/* Zig Zag Tear Mixin */
 .xe:before, .xe:after, .xe-inner:before, .xe-inner:after {
   content: '';
   position: absolute;
@@ -2671,27 +2667,28 @@ body {
   background-repeat: repeat-x;
   background-size: 6px 6px; }
 
+.xe {
+  background-color: #ffffff;
+  margin-top: 15px;
+  padding: 15px;
+  position: relative;
+  box-shadow: inset -1px 0 0 #ddd, inset 1px 0 0 #ddd; }
+  .xe:before {
+    background: linear-gradient(135deg, #ddd 3px, transparent 0), linear-gradient(-135deg, #ddd 3px, transparent 0);
+    top: 0; }
+  .xe:after {
+    background: linear-gradient(-45deg, #f1f1f1 3px, transparent 0), linear-gradient(45deg, #f1f1f1 3px, transparent 0);
+    bottom: -1px; }
+
 .xe-inner:before {
   background: linear-gradient(-135deg, #f1f1f1 3px, transparent 0), linear-gradient(135deg, #f1f1f1 3px, transparent 0);
-  background-size: 6px 6px;
   top: -1px; }
 
 .xe-inner:after {
   background: linear-gradient(-45deg, #ddd 3px, transparent 0), linear-gradient(45deg, #ddd 3px, transparent 0);
-  background-size: 6px 6px;
   bottom: 0px; }
 
-.xe:after {
-  background: linear-gradient(-45deg, #f1f1f1 3px, transparent 0), linear-gradient(45deg, #f1f1f1 3px, transparent 0);
-  background-size: 6px 6px;
-  bottom: -1px; }
-
-.xe:before {
-  background: linear-gradient(135deg, #ddd 3px, transparent 0), linear-gradient(-135deg, #ddd 3px, transparent 0);
-  background-size: 6px 6px;
-  top: 0; }
-
-/* Conversin Panel Inner */
+/* XE Panel Inner */
 .xe-inner {
   padding: 30px; }
 

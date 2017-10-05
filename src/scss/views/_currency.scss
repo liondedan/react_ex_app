@@ -7,19 +7,6 @@
 	 background: linear-gradient(-$deg, $color 3px, transparent 0), linear-gradient($deg, $color 3px, transparent 0);
 }
 
-.xe, .xe-inner {
-	 &:before, &:after {
-  	content: '';
-    position: absolute;
-    left: 0px;
-    display: block;
-    width: 100%;
-    height: 6px;
-    background-repeat: repeat-x;
-    background-size: 6px 6px;
-  }
-}
-
 .xe {
 	background-color: #ffffff;
 	margin-top: 15px;
@@ -35,6 +22,18 @@
 	&:after {@include xe_zig(45deg, $color-border); bottom: 0px;}
 }
 
+.xe, .xe-inner {
+   &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-repeat: repeat-x;
+    background-size: 6px 6px;
+  }
+}
 
 /* XE Panel Inner */
 .xe-inner {
